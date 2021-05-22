@@ -1,9 +1,10 @@
-from flask import Flask, request, redirect, url_for
+from flask import Flask, request
 from flask.templating import render_template
 from fastai import learner
 
+
 app = Flask(__name__)
-model = learner.load_learner("export.pkl")
+model = learner.load_learner('export.pkl')
 
 @app.route("/")
 def index():
